@@ -39,18 +39,19 @@ public class MyViewModel extends AndroidViewModel {
         handle.set(key, x);
     }
 
-    private void save() {
+    void save() {
         SharedPreferences shp = getApplication().getSharedPreferences(shpName, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = shp.edit();
+        // getNumber().getValue()逻辑上不会为空
         editor.putInt(key, getNumber().getValue());
         editor.apply();
     }
 
     public void add(int x) {
         handle.set(key, getNumber().getValue() + x);
-        save();
+//        // 每次修改数据后就写文件，开销太大
+//        save();
     }
-
 
 
 }

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="data"
             type="com.supremesir.viewmodelshp_java.MyViewModel" />
@@ -30,8 +31,8 @@
             android:id="@+id/button_add"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/button_add"
             android:onClick="@{() -> data.add(1)}"
+            android:text="@string/button_add"
             app:layout_constraintBottom_toTopOf="@+id/guideline3"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
             app:layout_constraintStart_toStartOf="parent"
@@ -41,8 +42,8 @@
             android:id="@+id/button_sub"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/button_sub"
             android:onClick="@{() -> data.add(-1)}"
+            android:text="@string/button_sub"
             app:layout_constraintBottom_toTopOf="@+id/guideline3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/guideline"

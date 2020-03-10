@@ -15,6 +15,14 @@ public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
 
     @Override
+    protected void onPause() {
+        super.onPause();
+        // onStop和onDestroy有可能会被跳过
+        // 若手机系统崩溃，断电等，数据仍然会丢失
+        myViewModel.save();
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 //        setContentView(R.layout.activity_main);
