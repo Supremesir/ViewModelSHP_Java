@@ -48,6 +48,7 @@ public class MyViewModel extends AndroidViewModel {
 
     public void add(int x) {
         handle.set(key, getNumber().getValue() + x);
+        save();
     }
 
 
