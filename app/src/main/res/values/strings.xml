@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">ViewModelSHP_Java</string>
+    <string name="display">0</string>
+    <string name="button_add">+1</string>
+    <string name="button_sub">-1</string>
+    <string name="data_key">DATA_KEY</string>
+    <string name="shp_name">SHP_NAME</string>
 </resources>
